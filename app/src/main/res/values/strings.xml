@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ppc_tpFinalCursada_kowalski_fargnoli</string>
+    <string name="textoPaciente">Ingrese el Nombre y Apellido</string>
+    <string name="riesgoRecurrente">Ingrese un numero entre 1 y 10</string>
+    <string name="riesgoProgreso">Ingrese un numero entre 1 y 10</string>
+    <string name="radioGroup"></string>
+</resources>

@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "ppc_tpFinalCursada_kowalski_fargnoli"
