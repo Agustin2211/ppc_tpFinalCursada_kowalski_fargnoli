@@ -14,8 +14,10 @@
         android:layout_marginTop="100dp"
         android:onClick="grupoDeRiesgo"
         android:text="Grupo De Riesgo"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/informacionParaPacientes"
@@ -24,8 +26,10 @@
         android:layout_marginTop="60dp"
         android:onClick="informacionParaPacientes"
         android:text="Informacion Para Pacientes"
-        app:layout_constraintTop_toBottomOf="@+id/grupoDeRiesgo"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grupoDeRiesgo" />
 
     <Button
         android:id="@+id/cargaDeDatos"
@@ -34,6 +38,8 @@
         android:layout_marginTop="60dp"
         android:onClick="cargaDeDatos"
         android:text="Carga De Datos"
-        app:layout_constraintTop_toBottomOf="@+id/informacionParaPacientes"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/informacionParaPacientes" />
 </androidx.constraintlayout.widget.ConstraintLayout>
