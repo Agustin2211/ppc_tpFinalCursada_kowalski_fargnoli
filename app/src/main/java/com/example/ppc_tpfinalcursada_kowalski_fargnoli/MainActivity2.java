@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -36,36 +35,7 @@ public class MainActivity2 extends AppCompatActivity {
                     textView.setText("Error, parece que algo falló");
                 }
             });
-
         queue.add(stringRequest);
-
-        /*BOTONES DEL FOOTER*/
-        Button inicio = findViewById(R.id.inicioFooter2);
-        inicio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), MainActivity.class);
-                startActivity(i);
-            }
-        });
-
-        Button cargarDatos = findViewById(R.id.cargaDeDatos2);
-        cargarDatos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), MainActivity4.class);
-                startActivity(i);
-            }
-        });
-
-        Button infoPaciente = findViewById(R.id.infoPacienteFooter2);
-        infoPaciente.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), MainActivity3.class);
-                startActivity(i);
-            }
-        });
     }
 
 
@@ -73,8 +43,6 @@ public class MainActivity2 extends AppCompatActivity {
         Intent i = new Intent(this, MainActivity4.class);
         startActivity(i);
     }
-
-
 
     public void Atras (View view){
         Intent i = new Intent(this, MainActivity.class);
