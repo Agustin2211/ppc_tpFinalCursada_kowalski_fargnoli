@@ -12,12 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="#FC9"
+        android:background="#89C2D9"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@id/linearLayout"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,12 +33,18 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="48dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
 
         <ScrollView
             android:id="@+id/scrollView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -63,6 +68,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Compartir"
+                    android:background="@drawable/style_bottom"
+                    app:backgroundTint="@null"
                     app:layout_constraintBottom_toTopOf="@id/imageView2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -83,6 +90,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Compartir"
+                    android:background="@drawable/style_bottom"
+                    app:backgroundTint="@null"
                     app:layout_constraintBottom_toTopOf="@id/imageView3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -96,13 +105,15 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/compartir2"
-                    app:srcCompat="@drawable/placa_covid" />
+                    app:srcCompat="@drawable/prevencion_cartel_infografico_coronavirus_94250_126" />
 
                 <Button
                     android:id="@+id/compartir3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Compartir"
+                    android:background="@drawable/style_bottom"
+                    app:backgroundTint="@null"
                     app:layout_constraintBottom_toTopOf="@id/imageView4"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -123,54 +134,78 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="compartir"
+                    android:background="@drawable/style_bottom"
+                    app:backgroundTint="@null"
                     app:layout_constraintBottom_toTopOf="@id/imageView5"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/imageView4" />
 
+
                 <ImageView
                     android:id="@+id/imageView5"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    app:layout_constraintBottom_toTopmOf="@+id/compartir5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/compartir4"
-                    app:srcCompat="@drawable/placa_covid" />
-
-                <Button
-                    android:id="@+id/compartir5"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:text="Compartir"
-                    app:layout_constraintBottom_toTopOf="@id/imageView6"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/imageView5" />
-
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    app:layout_constraintBottom_toTopOf="@+id/compartir6"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/compartir5"
                     app:srcCompat="@drawable/pagina12_imagen_articulo142944343am" />
 
                 <Button
-                    android:id="@+id/compartir6"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginBottom="80dp"
-                    android:text="compartir"
+                    android:id="@+id/compartir5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/style_bottom"
+                    android:text="Compartir"
+                    app:backgroundTint="@null"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/imageView6" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
+
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#2C7DA0"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/inicioFooter3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INICIO" />
+
+            <Button
+                android:id="@+id/grupoDeRiesgoFooter3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grupo De Riesgo" />
+
+            <Button
+                android:id="@+id/cargaDeDatos3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cargar Datos" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
