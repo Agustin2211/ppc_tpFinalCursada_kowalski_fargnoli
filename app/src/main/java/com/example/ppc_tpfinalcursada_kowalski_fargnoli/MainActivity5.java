@@ -60,6 +60,7 @@ public class MainActivity5 extends AppCompatActivity {
         imagenDeLaApi = findViewById(R.id.imagenDeLaAPI);
         imagenDeLaApi.setImageUrl("http://ppc2021.edit.com.ar/service/api/imagen/" + riesgoRecurrente + "/" + riesgoProgreso + "/" + buleano, mImageLoader);
 
+
         Button atras = findViewById(R.id.atras5);
         atras.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +97,34 @@ public class MainActivity5 extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            }
+        });
+
+        /*BOTONES DEL FOOTER*/
+        Button inicio = findViewById(R.id.inicioFooter5);
+        inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button grupoDeRiesgo = findViewById(R.id.grupoDeRiesgoFooter5);
+        grupoDeRiesgo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), MainActivity2.class);
+                startActivity(i);
+            }
+        });
+
+        Button infoPaciente = findViewById(R.id.infoPacienteFooter5);
+        infoPaciente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), MainActivity3.class);
+                startActivity(i);
             }
         });
     }
