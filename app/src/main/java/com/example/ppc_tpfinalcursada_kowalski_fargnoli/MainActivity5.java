@@ -68,7 +68,7 @@ public class MainActivity5 extends AppCompatActivity {
         });
 
         imagenDeLaApi = findViewById(R.id.imagenDeLaAPI);
-        imagenDeLaApi.setImageUrl(urlQueDaLaApi, mImageLoader);
+        imagenDeLaApi.setImageUrl(url, mImageLoader);
 
 
         /*FORMA 2 (ImageLoader)
