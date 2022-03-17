@@ -3,6 +3,8 @@ package com.example.ppc_tpfinalcursada_kowalski_fargnoli;
 import android.app.Application;
 import android.content.Context;
 
+import com.android.volley.toolbox.ImageLoader;
+
 import java.util.List;
 
 public class MyApplication extends Application {
@@ -17,7 +19,7 @@ public class MyApplication extends Application {
         this.setAppContext(getApplicationContext());
     }
 
-    public static MyApplication getInstance(){
+    public static MyApplication getInstance(MainActivity5 mainActivity5){
         return mInstance;
     }
     public static Context getAppContext() {
@@ -26,4 +28,5 @@ public class MyApplication extends Application {
     public void setAppContext(Context mAppContext) {
         this.mAppContext = mAppContext;
     }
+
 }
