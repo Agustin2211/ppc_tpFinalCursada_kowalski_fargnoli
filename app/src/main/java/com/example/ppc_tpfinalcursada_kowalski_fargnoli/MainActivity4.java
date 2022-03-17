@@ -6,12 +6,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class MainActivity4 extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
@@ -45,25 +47,6 @@ public class MainActivity4 extends AppCompatActivity implements RadioGroup.OnChe
         NO = findViewById(R.id.no);
 
         SIoNO.setOnCheckedChangeListener(this);
-
-        Button atras = findViewById(R.id.atras4);
-        atras.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                SharedPreferences preferencesBoton = getSharedPreferences("datos", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = preferencesBoton.edit();
-                editor.putString("textoPaciente", textoPaciente.getText().toString());
-                editor.putString("riesgoRecurrente", riesgoRecurrente.getText().toString());
-                editor.putString("riesgoProgreso", riesgoProgreso.getText().toString());
-
-                editor.commit();
-
-                Intent i = new Intent(v.getContext(), MainActivity.class);
-                startActivity(i);
-            }
-
-        });
 
         calcular = findViewById(R.id.calcular4);
         calcular.setOnClickListener(new View.OnClickListener() {
@@ -101,8 +84,36 @@ public class MainActivity4 extends AppCompatActivity implements RadioGroup.OnChe
         SharedPreferences preferencesRiesgoProgreso = getSharedPreferences("datos", Context.MODE_PRIVATE);
         riesgoProgreso.setText(preferencesRiesgoProgreso.getString("riesgoProgreso", ""));
 
-    }
 
+        /*BOTONES DEL FOOTER*/
+        Button inicio = findViewById(R.id.inicioFooter4);
+        inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button grupoDeRiesgo = findViewById(R.id.grupoDeRiesgoFooter4);
+        grupoDeRiesgo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), MainActivity2.class);
+                startActivity(i);
+            }
+        });
+
+        Button infoPaciente = findViewById(R.id.infoPacienteFooter4);
+        infoPaciente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), MainActivity3.class);
+                startActivity(i);
+            }
+        });
+
+    }
 
     public void onCheckedChanged(RadioGroup arg0, int arg1){
         if (SI.isChecked()){

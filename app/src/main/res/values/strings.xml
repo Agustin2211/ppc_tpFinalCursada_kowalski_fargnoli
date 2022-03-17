@@ -4,4 +4,6 @@
     <string name="riesgoRecurrente">Ingrese un numero entre 1 y 10</string>
     <string name="riesgoProgreso">Ingrese un numero entre 1 y 10</string>
     <string name="radioGroup"></string>
+    <string name="AplicacionCOVID">nombreAPP</string>
+    <string name="nombre">Aplicacion COVID</string>
 </resources>
